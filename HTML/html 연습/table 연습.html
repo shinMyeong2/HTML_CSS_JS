@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>table 연습</title>
+        <style>
+            table, th, td {
+                border:1px solid #ccc;
+                border-collapse: collapse;
+            }
+            th, td { padding:10px 20px; }
+        </style>
+    </head>
+    <body>
+        <table>
+            <caption>table 이름</caption>
+            <tr>
+                <th></th>
+                <th>row1</th>
+                <th>row2</th>
+            </tr>
+            <tr>
+                <th>depth1</th>
+                <td>cell1</td>
+                <td>cell2</td>
+            </tr>
+            <tr>
+                <th>depth2</th>
+                <td>cell3</td>
+                <td>cell4</td>
+            </tr>
+        </table><br>
+        <table>
+            <caption>
+                표 구조 정리
+            </caption>
+            <thead>
+                <tr>
+                    <th>row1</th>
+                    <th>row2</th>
+                    <th>row3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>cell1-1</td>
+                    <td>cell1-2</td>
+                    <td>cell1-3</td>
+                </tr>
+            </tbody>
+        </table><br>
+        <table>
+            <caption>
+                행이나 열 통합
+            </caption>
+            <tr>
+                <td>//////</td>
+                <td>//////</td>
+                <td colspan="2">가로 통합</td>
+            </tr>
+            <tr>
+                <td>//////</td>
+                <td>//////</td>
+                <td>//////</td>
+                <td>//////</td>
+            </tr>
+            <tr>
+                <td rowspan="2">세로 통합</td>
+                <td>//////</td>
+                <td rowspan="2" colspan="2">가로 세로 통합</td>
+            </tr>
+            <tr>
+                <td>//////</td>
+            </tr>
+        </table><br>
+        <table>
+            <caption>
+                특정 열에 스타일 속성 지정
+            </caption>
+            <colgroup>
+                <col style="background-color:#eee;">
+                <col>
+                <col span="2" style="width:150px;">
+            </colgroup>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </body>
+</html>
