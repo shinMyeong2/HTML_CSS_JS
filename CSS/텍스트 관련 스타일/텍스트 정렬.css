@@ -1,0 +1,113 @@
+/* 중앙 정렬 */
+.center {
+    font-size: 24px;
+    text-align: center;
+}
+
+/* 양쪽 정렬 */
+.justify {
+    font-size: 24px;
+    text-align: justify;
+}
+
+/*
+줄 간격 24px로 지정
+p { font-size: 12px; line-height: 24px; } 크깃값으로 지정
+p { font-size: 12px; line-height; 2.0; }  배수로 지정
+p { font-size: 12px; line-height; 200%; } 백분율로 지정
+*/
+
+.small-line {
+    font-size: 24px;
+    line-height: 0.7;
+}
+
+.big-line {
+    font-size: 24px;
+    line-height: 2.5;
+}
+
+.heading {
+    width: 100px;
+    height: 100px;
+    background: #222;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    line-height: 100px; /* 세로 정렬 */
+}
+
+/* 줄 설정 */
+.deco-none {
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.deco-under {
+    font-size: 24px;
+    text-decoration: underline;
+}
+
+.deco-over {
+    font-size: 24px;
+    text-decoration: overline;
+}
+
+/* 그림자 설정 */
+.shadow1 {
+    color: red;
+    text-shadow: 1px 1px black;
+}
+
+.shadow2 {
+    text-shadow: 5px 5px 3px #ffa500;
+}
+
+.shadow3 {
+    color: #fff;
+    text-shadow: 7px -7px 20px #000;
+}
+
+/* 첫 글자만 대문자 변환 */
+.trans1 {
+    text-transform: capitalize;
+}
+
+/* 모든 글자를 대문자로 변환 */
+.trans2 {
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+/* 모든 글자를 소문자로 변환 */
+.trans3 {
+    font-size: 24px;
+    text-transform: lowercase;
+}
+
+/* 전각 문자로 변환 */
+.trans4 {
+    font-size: 24px;
+    text-transform: full-width;
+}
+
+/* 글자 사이 간격 조절 */
+.spacing1 {
+    font-size: 24px;
+    letter-spacing: 0.2em;
+}
+
+.spacing2 {
+    font-size: 24px;
+    letter-spacing: 0.5em;
+}
+
+/* 단어 사이 간격 조절 */
+.spacing3 {
+    font-size: 24px;
+    word-spacing: 0.2em;
+}
+
+.spacing4 {
+    font-size: 24px;
+    word-spacing: 0.5em;
+}

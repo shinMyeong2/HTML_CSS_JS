@@ -1,0 +1,25 @@
+#container {
+    width: 800px;
+    margin: 0 auto;
+}
+
+table, th, td {
+    border: 1px solid #222;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+}
+
+h1 {
+    color: #a52a2a;
+}
+
+h2 {
+    color: hsl(240, 100%, 50%);
+}
+
+li {
+    color: rgb(0, 128, 0);
+}

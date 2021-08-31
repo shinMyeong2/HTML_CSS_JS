@@ -1,0 +1,19 @@
+/* 글꼴 지정 */
+body {
+    font-family: "맑은 고딕", 돋움, 굴림
+}
+
+/* 글자 크기 지정 */
+h1 {
+    font-size: 20px;
+}
+
+/* italic 지정 */
+.italic {
+    font-style: italic;
+}
+
+/* 글자 굵기 지정 */
+.accent {
+    font-weight: 800;
+}

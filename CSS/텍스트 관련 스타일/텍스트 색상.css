@@ -1,0 +1,25 @@
+/*16진수 표기법*/
+h1 {
+    color: #0000ff;
+}
+
+/*색상 이름 지정*/
+p {
+    color: green;
+}
+
+/*hsl 표기법*/
+.accent {
+    color: hsl(0, 100%, 50%);
+    font-weight: bold;
+}
+
+/*rgb 표기법*/
+.color1 {
+    color: rgb(120, 120, 255);
+}
+
+/*rgba 표기법*/
+.color2 {
+    color: rgba(120, 120, 255, 0.5);
+}

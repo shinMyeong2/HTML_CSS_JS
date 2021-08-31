@@ -1,8 +1,12 @@
 /*전체 선택자*/
-* {margin: 0; }
+* {
+    margin: 0;
+}
 
 /*타입 선택자*/
-p {font-style: sialic; }
+p {
+    font-style: sialic;
+}
 
 /*클래스 선택자*/
 .accent {
@@ -22,9 +26,13 @@ p {font-style: sialic; }
 }
 
 /*그룹 선택자*/
-h2, h3 {text-align: center; }
+h2, h3 {
+    text-align: center;
+}
 
 /*
 !important 우선 적용
-p {font-style: italic !important; }
+p {
+    font-style: italic !important;
+}
 */
