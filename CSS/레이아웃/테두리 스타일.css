@@ -1,0 +1,84 @@
+div {
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    margin: 15px;
+}
+
+#box1 {
+    border-style: solid;  /* 실선 */
+    display: inline-block;
+}
+#box2 {
+    border-style: dotted; /* 점선 */
+    display: inline-block;
+}
+#box3 {
+    border-style: dashed; /* 짧은 직선 */
+    display: inline-block;
+}
+
+/* 테두리 두께 지정 top > right > bottom > left 순서 */
+#box4 {
+    border-width: 2px;
+    border-style: solid;
+    display: inline-block;
+}
+#box5 {
+    border-width: thick thin;
+    border-style: solid;
+    display: inline-block;
+}
+#box6 {
+    border-width: thick thin thin;
+    border-style: solid;
+    display: inline-block;
+}
+#box7 {
+    border-width: 10px 5px 5px 10px;
+    border-style: solid;
+    display: inline-block;
+}
+
+/* 테두리 색상 지정 */
+#box8 {
+    border-color: red;
+    border-style: dotted;
+    display: inline-block;
+}
+#box9 {
+    border-top-color: blue;
+    border-left-color: red;
+    border-style: dotted;
+    display: inline-block;
+}
+
+/* border로 묶어서 지정 */
+h1 {
+    padding-bottom: 5px;
+    border-bottom: 3px solid rgb(75, 70, 70);
+}
+p {
+    padding: 10px;
+    border: 3px dotted blue;
+}
+
+/* 둥근 테두리 지정 */
+#round1 {
+    border-radius: 25px;
+    display: inline-block;
+}
+#round2 {
+    border-radius: 50%;
+    display: inline-block;
+}
+#round3 {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+#round4 {
+    border-radius: 50%/30%;  /* 테두리 타원으로 지정 */
+}
+#round5 {
+    border-bottom-right-radius: 50% 30%; /* 특정 지점만 타원 지정 */
+}
