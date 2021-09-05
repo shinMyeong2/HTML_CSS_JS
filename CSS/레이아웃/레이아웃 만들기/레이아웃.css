@@ -1,0 +1,40 @@
+/* 수평 내비게이션 만들기 */
+* {
+    box-sizing: gorder-box;
+}
+nav ul {
+    list-style: none;
+}
+nav ul li {
+    display: inline-block;
+    padding: 20px;
+    margin: 0 20px;
+    border: 1px solid #222;
+}
+
+/* 텍스트 배치하기(띄우기) */
+img {
+    float: left;
+    margin-right: 40px;
+}
+
+/* 텍스트 배치 해제 */
+#box1 {
+    background: #ffd800;
+    float: left;
+}
+#box2 {
+    background: #0094ff;
+    float: left
+}
+#box3 {
+    background: #00ff21;
+}
+#box4 {
+    background: #a874ff;
+    clear: left;
+}
+#box1, #box2, #box3, #box4 {
+    padding: 20px;
+    margin: 10px
+}

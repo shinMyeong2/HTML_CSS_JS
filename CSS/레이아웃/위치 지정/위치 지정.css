@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    width: 300px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+/* 포지셔닝 - absolute */
+#pos1 {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+}
+
+#pos2 {
+    position: absolute;
+    right: 100px;
+    top: 100px;
+}
+
+#pos3 {
+    position: absolute;
+    left: 100px;
+    bottom: 100px;
+}
+
+/* 포지셔닝 - static(기본값) */
+#static {
+    position: static;
+}
+
+/* 포지셔닝 - relative */
+#relative-1 {
+    position: relative;
+}
+
+#relative-2 {
+    position: relative;
+    left: 100px;
+    top: -50px;
+}
+
+/* 포지셔닝 - fixed */
+#fixed {
+    width: 100px;
+    height: 100px;
+    background-color: #555;
+    position: fixed;
+    right: 30px;
+    top: 30px;
+}

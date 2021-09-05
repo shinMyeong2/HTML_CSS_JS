@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#contents {
+    background: url("bg.jpg") no-repeat;
+    background-size: cover;
+    width: 800px;
+    height: 500px;
+    margin: 0 auto;
+    position: relative; /* absolute의 기준이 됨 */
+}
+
+h1 {
+    color: #fff;
+    font-size: 120px;
+    text-shadow: 2px 3px 0 #000;
+    position: absolute; /* relative를 기준으로 위치 지정 */
+    right: 100px;
+    bottom: 100px;
+}
