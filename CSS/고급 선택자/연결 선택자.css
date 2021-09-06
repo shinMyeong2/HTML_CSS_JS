@@ -1,0 +1,11 @@
+/* 하위 선택자 */
+header p { color: blue; }
+
+/* 자식 선택자 */
+section > p { color: blue; }
+
+/* 인접 선택자 */
+h2 + p { color: blue; }
+
+/* 형제 선택자 */
+h3 ~ p { color: blue; }
