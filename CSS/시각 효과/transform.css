@@ -1,0 +1,104 @@
+#container {
+    width: 800px;
+    height: 200px;
+    margin: 20px auto;
+}
+
+.origin {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    margin: 40px;
+    float: left;
+}
+
+.origin > div {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+}
+
+.origin2 {
+    width: 152px;
+    height: 180px;
+    border: 1px solid black;
+    margin: 30px;
+    float: left;
+}
+
+/* translate() == 요소 이동 */
+#moveX:hover {
+    transform: translateX(50px);
+}
+#moveY:hover {
+    transform: translateY(20px);
+}
+#moveXY:hover {
+    transform: translate(10px, 20px);
+}
+
+/* scale() == 요소 확대 or 축소 */
+#scaleX:hover {
+    transform: scaleX(2);
+}
+#scaleY:hover {
+    transform: scaleY(1.5);
+}
+#scale:hover {
+    transform: scale(0.7);
+}
+
+/* rotate() == 요소 회전 */
+#rotate1:hover {
+    transform: rotate(40deg);
+}
+#rotate2:hover {
+    transform: rotate(-40deg);
+}
+
+/* 3차원 회전 */
+.rotate3d:hover {
+    transform: rotateX(50deg);
+}
+#pers {           /* 원근감 추가 */
+    perspective: 300px;
+}
+
+.origin3 {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    margin: 40px;
+    float: left;
+    perspective: 200px;  /* 원근감 추가 */
+}
+.origin3 > div {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    transition: all 3s;  /* 3초 동안 회전 */
+}
+
+#rotateX:hover {
+    transform: rotateX(55deg);
+}
+#rotateY:hover {
+    transform: rotateY(55deg);
+}
+#rotateZ:hover {
+    transform: rotateZ(55deg);
+}
+#rotateXYZ:hover {
+    transform: rotate3d(2.5, 1.2, -1.5, 55deg);
+}
+
+/* skew() == 요소 비틀기 */
+#skewX:hover {
+    transform: skewX(30deg);
+}
+#skewY:hover {
+    transform: skewY(15deg);
+}
+#skewXY:hover {
+    transform: skew(-25deg, -15deg);
+}

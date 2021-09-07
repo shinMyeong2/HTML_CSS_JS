@@ -1,0 +1,64 @@
+.box {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #222;
+    margin: 20px auto;
+    background-color: #07f;
+    transition-property: width, height; /* 트랜지션 대상 - 너비, 높이 */
+    transition-duration: 2s, 1s;  /* 트랜지션 시간 - 2초, 1초 */
+}
+.box:hover {
+    width: 200px;
+    height: 120px;
+}
+
+#ex div {
+    float: left;
+    width: 100px;
+    height: 50px;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px 10px;
+    color: white;
+    background-color: #006aff;
+    text-align: center;
+    font-weight: bold;
+}
+#ex:hover div {
+    height: 400px;
+}
+#ex .ease {  /* 느리게 시작, 점점 빨라짐, 느리게 끝남(기본값) */
+    transition: 3s ease;
+}
+#ex .linear { /* 시작부터 끝까지 같은 속도 */
+    transition: 3s linear;
+}
+#ex .ease-in { /* 느리게 시작, 빠르게 끝 */
+    transition: 3s ease-in;
+}
+#ex .ease-out { /* 빠르게 시작, 느리게 끝 */
+    transition: 3s ease-out;
+}
+#ex .ease-in-out { /* 느리게 시작, 느리게 끝 */
+    transition: 3s ease-in-out;
+}
+/* linear, ease-in, ease-out, ease-in-out 모두 같이 끝남 */
+
+.box2 {
+    clear: left;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #222;
+    margin: 50px auto;
+    background-color: #fb5;
+    transition: 2s ease-in;
+    /* property:all(기본값), duration:2초, timing:ease-in, delay:0초(기본값) */
+}
+.box2:hover {
+    width: 200px;
+    height: 200px;
+    background-color: #f50;
+    transform: rotate(270deg);
+}
+/* transition: <transition-property> | <transition-duration> |
+        <transition-timing-function> | <transition-delay> */
