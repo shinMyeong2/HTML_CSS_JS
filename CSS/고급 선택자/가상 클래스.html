@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta chraset="UTF-8">
+        <title>가상 클래스</title>
+        <link rel="stylesheet" href="가상 클래스.css">
+    </head>
+    <body>
+        <div class="container">
+            <nav class="navi">
+                <ul>
+                    <li><a href="#intro">이용 안내</a></li>
+                    <li><a href="#room">객실 소개</a></li>
+                    <li><a href="#reservation">예약 방법 및 요금</a></li>
+                    <li><a href="#signup">예약하기</a></li>
+                </ul>
+            </nav>
+            <div id="intro" class="contents">
+                <div class="contents1">
+                    <h2>이용 안내</h2>
+                    <p>Excepteur do est eiusmod nulla et veniam.</p>
+                    <p>Labore officia officia ex aliqua exercitation aliqua laborum Lorem deserunt ut ullamco labore anim.</p>
+                    <p>Do laborum et consequat aliqua sint consectetur.</p>
+                </div>
+            </div>
+            <div id="room" class="contents">
+                <div class="contents2">
+                    <h2>객실 소개</h2>
+                    <p>Qui magna culpa minim reprehenderit magna in nisi ipsum.</p>
+                    <p>Ad cillum tempor minim fugiat est dolor.</p>
+                    <p>Cillum sit qui minim sint officia nostrud cillum cupidatat pariatur ipsum eiusmod velit labore.</p>
+                    <p>Sit in non fugiat minim sit.</p>
+                </div>
+            </div>
+            <div id="reservation" class="contents">
+                <h2>예약 방법 및 요금</h2>
+                <p>Fugiat aliquip mollit proident velit magna esse ea officia eu. Esse do aliqua proident culpa eiusmod duis minim deserunt eu reprehenderit ut tempor.</p>
+            </div>
+            <form id="signup">
+                <fieldset>
+                    <legend>개인 정보</legend>
+                    <ul>
+                        <li>
+                            <label for="fullname">이름</label>
+                            <input id="fullname" name="fullname" type="text" required>
+                        </li>
+                        <li>
+                            <label for="tel">연락처</label>
+                            <input id="tel" name="tel" type="tel">
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend>객실 형태</legend>
+                    <ul>
+                        <li>
+                            <input type="radio" name="room" id="basic">
+                            <label for="basic">기본형(최대 2인)</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="room" id="family">
+                            <label for="family">가족형(최대 8인)</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <button type="submit"> 제출 </button>
+            </form>
+            <h1>제품 목록</h1>
+            <ul>
+                <li class="new">제품 A</li>
+                <li>제품 B</li>
+                <li>제품 C</li>
+                <li class="new">제품 D</li>
+            </ul>
+        </div>
+    </body>
+</html>

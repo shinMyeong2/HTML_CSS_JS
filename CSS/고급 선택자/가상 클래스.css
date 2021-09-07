@@ -1,0 +1,154 @@
+/* 가상 클래스 */
+/* 사용자 동작에 반응하는 가상 클래스 */
+.navi a:link, .navi a:visited {
+    display: block;
+    font-size: 14px;
+    color: #000;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+}
+.navi a:hover, .navi a:focus {
+    background-color: #222;
+    color: #fff;
+}
+.navi a:active {
+    background-color: #f00;
+}
+
+/* :target 가상 클래스 */
+#intro:target {
+    background-color: #0069e0;
+    color: #fff;
+}
+#room:target {
+    background-color: #ff9844;
+}
+#reservation:target {
+    background-color: #fff8dc;
+}
+
+/* :checked 가상 클래스 */
+#signup input:checked + label {
+    color: red;
+    font-weight: bold;
+}
+
+/* :not 가상 클래스 */
+#signup input:not([type=radio]) {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 5px;
+    width: 200px;
+}
+#signup input:not([type=radio]):hover {
+    border-color: #f00;
+}
+
+/* 구조 가상 클래스 */
+/* 특정 위치의 자식 요소 선택 */
+#signup fieldset:first-of-type label {
+    float: left;
+    font-size: 13px;
+    width: 60px;
+}
+.contents1 :nth-child(3) {
+    background-color: #ffff00;
+}
+.contents1 p:nth-of-type(3) {
+    background-color: #00b900;
+}
+.contents2 p:nth-of-type(2n) {
+    background: lightgray;
+    color: black;
+}
+
+/* 가상 요소 */
+li.new::after {
+    content: "NEW!!";
+    font-size: x-small;
+    padding: 2px 4px;
+    margin: 0 10px;
+    border-radius: 2px;
+    background: #f00;
+    color: #fff;
+}
+
+/*====================*/
+ul li {
+    margin: 15px;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.navi {
+    width: 960px;
+    height: 60px;
+}
+
+.navi ul {
+    list-style: none;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.navi ul li {
+    float: left;
+    width: 150px;
+    padding: 10px;
+}
+
+.contents {
+    margin: 30px auto;
+    width: 400px;
+    padding: 20px;
+    border: 1px solid #222;
+    border-radius: 5px;
+}
+
+#signup {
+    background: #fff;
+    border: 1px solid #222;
+    border-radius: 4px;
+    padding: 20px;
+    width: 400px;
+    margin: 30px auto;
+}
+
+#signup fieldset {
+    border: 1px solid #ccc;
+    margin-bottom: 30px;
+}
+
+#signup legend {
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-bottom: 10px;
+}
+
+#signup ul li {
+    line-height: 30px;
+    list-style: none;
+    padding: 5px 10px;
+    margin-bottom: 2px;
+}
+
+#signup button {
+    border: 1px solid #222;
+    border-radius: 20px;
+    display: block;
+    font: 16px 맑은고딕, 굴림, 돋움;
+    letter-spacing: 1px;
+    margin: auto;
+    padding: 7px 25px;
+}
+
+#signup b {
+    float: left;
+    font-size: 13px;
+    width: 110px;
+}
