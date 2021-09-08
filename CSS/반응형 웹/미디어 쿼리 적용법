@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>미디어 쿼리</title>
+        <!-- <link>로 외부파일 연결 -->
+        <link rel="stylesheet" media="screen" href=".css">
+        <!-- @import로 외부파일 연결 -->
+        <style>
+            @import url(".css") only screen and (min-width: 321px) and (max-width: 768px);
+        </style>
+        <!-- media속성으로 직접 정의 -->
+        <style media="screen and (max-width: 320px)">
+            body {
+                background-color: orange;
+            }
+        </style>
+        <!-- @media로 직접 정의 -->
+        <style>
+            @media screen and (max-width: 320px) {
+                body {
+                    background-color: orange;
+                }
+            }
+        </style>
+    </head>
+    <body>
+
+    </body>
+</html>

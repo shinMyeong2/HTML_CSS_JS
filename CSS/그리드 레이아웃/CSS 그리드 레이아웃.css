@@ -1,0 +1,105 @@
+.items {
+    padding: 10px;
+    background-color: #eee;
+}
+.items:nth-child(odd) {
+    background-color: #bbb;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+/* ==================== */
+#wrapper1 {
+    display: grid;  /* 그리드 컨테이너 지정 */
+    grid-template-columns: 200px 200px 200px;  /* columns 크기 개수 지정 */ /* 너비 200px 3개 */
+    grid-template-rows: 100px;  /* rows 크기 개수 지정 */ /* 높이 100px 1개 */
+}
+
+#wrapper2 {
+    width: 600px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* repeat(3, 1fr) -> 1fr 1fr 1fr */ /* fr == 상대적인 크기 지정 */
+    grid-template-rows: minmax(100px, auto);  /* 최솟값 100px, 최댓값 auto */
+}
+
+/* auto-fit, auto-fill == 화면이 넓어지면 칼럼의 개수 증가 */
+#wrapper3 {
+    display: grid;               /* 남은 공간을 다 채움 */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin-bottom: 20px;
+}
+#wrapper4 {
+    display: grid;               /* 원래 크기 유지 */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+/* grid-gap == 항목 사이 간격 조절 */
+#wrapper5 {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: minmax(100px, auto);
+    grid-gap: 20px 30px;  /* row 간격 20px, column 간격 30px */
+}
+
+/* 그리드 라인을 사용하여 항목 배치 */
+#wrapper6 {
+    width: 700px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 100px);
+}
+.box {
+    padding: 15px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+.box1 {
+    background-color: #3689ff;
+    grid-column: 1/4;  /* column 그리드 라인 1번부터 4번까지 연결 */
+}
+.box2 {
+    background-color: #00cf12;
+    grid-row: 2/4;
+    grid-column-start: 1;  /* column 그리드 라인 1번부터 시작 */
+}
+.box3 {
+    background-color: #ff9019;
+    grid-column: 2/4;
+    grid-row-start: 2;
+}
+.box4 {
+    background-color: #ffd000;
+    grid-column-start: 3;
+    grid-row-start: 3;
+}
+
+/* grid-area == 템플릿 영역을 만들어 배치 */
+#wrapper7 {
+    width: 700px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    grid-template-areas:  /* 템플릿 영역 지정 */
+        "box1 box1 box1"
+        "box2 box3 box3"
+        "box2 . box4";
+}
+.box1a {
+    background-color: #3689ff;
+    grid-area: box1;
+}
+.box2a {
+    background-color: #00cf12;
+    grid-area: box2;
+}
+.box3a {
+    background-color: #ff9019;
+    grid-area: box3;
+}
+.box4a {
+    background-color: #ffd000;
+    grid-area: box4;
+}
