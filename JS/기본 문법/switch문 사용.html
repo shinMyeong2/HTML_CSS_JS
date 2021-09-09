@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>switch문 사용</title>
+    </head>
+    <body>
+        <script>
+            var session = prompt("1번 - 동그라미, 2번 - 세모, 3번 - 네모");
+
+            switch (session) {
+                case "1" : document.write("동그라미!")
+                    break;
+                case "2" : document.write("세모!")
+                    break;
+                case "3" : document.write("네모")
+                    break;
+                default: alert("입력이 잘못되었습니다.");
+            }
+        </script>
+    </body>
+</html>
