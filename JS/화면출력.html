@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>화면출력</title>
+    </head>
+    <body>
+        <script>
+            // 알림 창 출력
+            alert("안녕하세요");
+
+            // 확인 창 출력
+            var reply = confirm("정말 배경 이미지를 바꾸시겠습니까?");
+
+            // 프롬프트 창 출력, 입력
+            var name = prompt("이름을 입력하세요.");
+            var name = prompt("이름을 입력하세요.", "-이름-"); //기본값 입력
+
+            //웹 브라우저 화면 출력
+            document.write("<h1>어서오세요</h1>");
+            // 변수를 입력받아 출력
+            document.write("<b><big>" + name + "</big></b>님, 환영합니다.");
+
+            // 콘솔 출력(Ctrl+Shift+J를 누르면 콘솔이 열림)
+            console.log(name + "님, 환영합니다.");
+        </script>
+    </body>
+</html>
