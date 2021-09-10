@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Array객체</title>
+        <style>
+            body {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            var nums = [1, 2, 3];
+            var chars = ["a", "b", "c", "d"];
+
+            // .length를 이용한 반복문
+            for(i = 0; i < chars.length; i++) {
+                document.write(chars[i] + " ");
+            }
+            document.write("<hr>");
+
+            // concat() == 두 개의 배열 합치기
+            var numsChars = nums.concat(chars);
+            var charsNums = chars.concat(nums);
+            document.write("numsChars : ", numsChars, "<br>charsNums : ", charsNums, "<hr>");
+
+            // join() == 배열의 요소 합치기
+            var string1 = nums.join();  // 기본 구분자(,)
+            document.write("구분자 미지정 : ", string1, "<br>");
+            var string2 = chars.join('/');
+            document.write("구분자 지정(/) : ", string2, "<hr>");
+
+            // push(), unshift() == 배열에 새로운 요소 추가
+            var ret1 = nums.push(4);  // 배열의 맨 뒤에 추가
+            document.write("length : ", ret1, " | 배열 : ", nums, "<br>");
+            var ret2 = chars.unshift('z');  // 배열의 맨 앞에 추가
+            document.write("length : ", ret2, " | 배열 : ", chars, "<hr>");
+
+            // pop(), shift() == 배열의 요소를 추출
+            var popped1 = nums.pop();     //배열의 맨 뒤에서 추출
+            document.write("꺼낸 요소 : ", popped1, " | 배열 : ", nums, "<br>");
+            var popped2 = chars.shift(); // 배열의 맨 앞에서 추출
+            document.write("꺼낸 요소 : ", popped2, " | 배열 : ", chars, "<hr>");
+
+            // splice() == 원하는 위치에 요소를 추가, 삭제
+                // 인수가 1개인 경우
+                var numbers = [1, 2, 3, 4, 5];
+                var newNumbers = numbers.splice(2); // 첫번째 인수는 배열의 인덱스 값을 의미
+                document.write("반환된 배열 : " + newNumbers + "<br>");
+                document.write("변경된 배열 : " + numbers + "<hr>");
+
+                // 인수가 2개인 경우
+                var numbers = [1, 2, 3, 4, 5];
+                var newNumbers = numbers.splice(2, 1); // 두번째 인수는 삭제할 요소의 개수를 의미
+                document.write("반환된 배열 : " + newNumbers + "<br>");
+                document.write("변경된 배열 : " + numbers + "<hr>");
+
+                // 인수가 3개 이상인 경우
+                var numbers = [1, 2, 3, 4, 5];
+                var newNumbers = numbers.splice(2, 1, 6); // 세번째 인수부터는 추가할 요소를 의미
+                document.write("반환된 배열 : " + newNumbers + "<br>");
+                document.write("변경된 배열 : " + numbers + "<hr>");
+
+            // slice() == 배열을 바꾸지 않고 요소를 추출
+                // 인수가 1개인 경우
+                var colors = ["red", "green", "blue", "white", "black"];
+                var newColors1 = colors.slice(3); // 첫번째 인수는 배열의 인덱스 값을 의미
+                document.write(colors + "<br>");
+                document.write(newColors1 + "<hr>");
+
+                // 인수가 2개 이상인 경우
+                var newColors2 = colors.slice(2, 5); // (두번째 인수)-1 은 추출할 마지막 인덱스 값을 의미
+                document.write(colors + "<br>");
+                document.write(newColors2);
+        </script>
+    </body>
+</html>
