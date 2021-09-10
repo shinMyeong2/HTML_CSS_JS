@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>함수 사용</title>
+    </head>
+    <body>
+        <script>
+            var userNum1 = parseInt(prompt("숫자를 입력하세요"));
+            var userNum2 = parseInt(prompt("숫자를 입력하세요"));
+
+            function addNumber(userNum1, userNum2) {
+                var num1 = userNum1;
+                var num2 = userNum2; // 지역 변수
+                sum = num1 + num2;   // 전역 변수(var사용x)
+                document.write("결과 값 : " + sum);
+            }
+            addNumber(userNum1, userNum2);
+            document.write(", " + sum); // 전역 변수 sum 사용 가능
+        </script>
+    </body>
+</html>

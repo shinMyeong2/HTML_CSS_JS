@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>함수 표현식</title>
+        <style>
+            body {
+                padding-top: 20px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            // 익명 함수 == 함수를 바로 변수에 할당
+            var sum = function(a, b) {
+                return a + b;
+            }
+
+            document.write("함수 실행 결과 : " + sum(10, 20) + "<br>");
+
+            // 즉시 실행 함수 == 함수 정의와 동시에 호출, 한 번만 실행 가능
+            (function() {
+                var userName = prompt("이름을 입력하세요.");
+                document.write("안녕하세요. <span class='accent'>" + userName + "</span>님!" + "<br>");
+            }());
+
+            // 매개 변수가 있을 경우, 마지막에 인수 작성
+            (function(a, b) {
+                sum = a + b;
+            }(100, 200));
+            document.write("함수 실행 결과 : " + sum + "<br>");
+
+            // 화살표 함수 == 함수 선언을 간단하게 작성 가능
+
+            // 매개 변수가 없을 경우
+
+                // 익명 함수로 작성
+                // donst hi = function() {
+                //     return "안녕하세요?";
+                // }
+
+                // 화살표 함수로 작성
+                // const hi = () => { return "안녕하세요?" };
+
+            // 위 함수의 함수 내용이 한 줄이므로 중괄호와 return 생략 가능
+            const hi1 = () => "안녕하세요?";
+            document.write(hi1() + "<br>");
+
+            // 매개 변수가 1개일 경우
+                
+                // 익명 함수로 작성
+                // let hi = function(user) {
+                //     document.write(user + "님, 안녕하세요?");
+                // }
+
+                // 화살표 함수로 작성
+                // let hi = (user) => { document.write(user + "님, 안녕하세요?"); }
+            
+            // 위 함수의 매개 변수가 하나이므로 괄호 생략 가능
+            let hi2 = user => document.write(user + "님, 안녕하세요?<br>");
+            hi2("사용자");
+
+            // 매개 변수가 2개 이상일 경우
+                
+                // 익명 함수로 작성
+                // let sum = function(a, b) {
+                //     return a + b;
+                // }
+
+                // 화살표 함수로 작성
+                // let sum = (a, b) => { return a + b };
+
+            // 위 함수의 매개 변수가 2개 이상이므로 괄호 생략 불가
+            let hi3 = (a, b) => a + b;
+            document.write("두 수의 합 : " + hi3(10, 20));
+        </script>
+    </body>
+</html>

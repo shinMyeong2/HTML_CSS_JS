@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>test1</title>
+        <style>
+            body {
+                font-size: 1.2em;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>4의 배수인가 아닌가</h2>
+
+        <script>
+            var userNumber = parseInt(prompt("숫자를 입력하세요."));
+
+            if (userNumber !== null) {
+                if (userNumber % 4 === 0) {
+                    document.write(userNumber + "는 4의 배수입니다.");
+                } else {
+                    document.write(userNumber + "는 4의 배수가 아닙니다.");
+                }
+            }
+            else {
+                document.write("입력이 잘못되었습니다.");
+            }
+        </script>
+    </body>
+</html>

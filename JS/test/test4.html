@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>test4</title>
+    </head>
+    <body>
+        <script>
+            var num1 = parseInt(prompt("첫번째 숫자를 입력하세요."));
+            var num2 = parseInt(prompt("두번째 숫자를 입력하세요."));
+
+            bigger(num1, num2);
+
+            function bigger(no1, no2) {
+                if (no1 === no2) {
+                    alert(no1 + "(과)와 " + no2 + "는 같습니다.");
+                }
+                else if (no1 > no2) {
+                    alert(no1 + "(이)가 " + no2 + "보다 큽니다.");
+                }
+                else if (no1 < no2) {
+                    alert(no2 + "(이)가 " + no1 + "보다 큽니다.");
+                }
+                else {
+                    alert("오류가 발생했습니다.");
+                }
+            }
+        </script>
+    </body>
+</html>

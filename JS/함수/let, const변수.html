@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>let변수</title>
+    </head>
+    <body>
+        <script>
+            // const변수 == 상수, 재선언이나 재할당 불가
+            const pi = 3.14;
+
+            function circleExtent(radius) {
+                // let변수 == {}나 ()에서만 사용 가능, 재선언 불가
+                let sum = pi * radius;
+                document.write(sum);
+            }
+
+            circleExtent(parseInt(prompt("반지름을 입력하세요")));
+        </script>
+    </body>
+</html>
