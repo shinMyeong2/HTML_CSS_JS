@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>screen_test</title>
+    </head>
+    <body>
+        <script>
+            // 화면 비율을 기준으로 브라우저를 화면 가운데에 표시
+            function openCenter(doc, win, w, h) {
+                var left = (screen.availWidth - w) / 2;
+                var top = (screen.availHeight - h) / 2;
+                var opt = "left = " + left + ", top = " + top + ", width = " + w + ", height = " + h;
+                window.open(doc, win, opt);
+            }
+            openCenter("window_test.html", "pop", 500, 400);
+        </script>
+    </body>
+</html>

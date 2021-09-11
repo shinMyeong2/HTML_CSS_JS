@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>window객체</title>
+    </head>
+    <body onload="openPopup()">
+                        <!-- .close() == 브라우저 닫기 -->
+        <button onclick="javascript: window.close();">닫기</button>
+
+        <script>
+            // window객체, window없이도 작동
+            // .open(경로, 이름, 옵션) == 새 브라우저 열기
+            window.open("window_test.html", "pop", "width=500, height= 400, left=100, top=200");
+
+            // 팝업 차단 알림
+            var blocked = false;
+            function openPopup() {
+                var newWin = window.open("window_test.html", "pop", "width=500, height= 400, left=100, top=200");
+                if (newWin == null) {
+                    alert("팝업이 차단되어 있습니다. 팝업 차단을 해제해 주세요.");
+                }
+                // .moveBy() == 현재 창을 지정한 크기만큼 이동
+                newWin.moveBy(100, 100);
+            }
+        </script>
+    </body>
+</html>

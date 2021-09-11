@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>location객체</title>
+        <style>
+            #container {
+                width: 500px;
+                margin: 10px auto;
+            }
+            #display {
+                padding: 10px;
+                margin-top: 10px;
+                border: 1px solid #222;
+                box-shadow: 1px 0 1px #ccc;
+            }
+            p {
+                font-size: 1em;
+            }
+            button {
+                margin-top: 20px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div id="display">
+                <script>
+                    // location.href == 전체 URL, 이 값이 변경되면 해당 주소로 이동
+                    // location.host == URL의 호스트 이름, 포트 번호 저장
+                    // location.protocol == URL의 프로토콜 저장
+                    document.write("<p><b>location.href : </b>" + location.href + "</p>");
+                    document.write("<p><b>location.host : </b>" + location.host + "</p>");
+                    document.write("<p><b>location.protocol : </b>" + location.protocol + "</p>");
+                </script>
+            </div>
+                            <!-- location.replace() == 현재 문서의 URL을 지우고 다른 URL의 문서로 교체 -->
+            <button onclick="location.replace('http://www.naver.com')">이동하기</button>
+        </div>
+    </body>
+</html>

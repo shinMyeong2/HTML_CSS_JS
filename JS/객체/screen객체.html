@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>screen객체</title>
+        <style>
+            #container {
+                width: 400px;
+                margin: 10px auto;
+            }
+            .display {
+                padding: 10px;
+                border: 1px solid #222;
+                margin-top: 10px;
+                box-shadow: 1px 0 1px #ccc;
+            }
+            p {
+                font-size: 1em;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <h2>scree 객체</h2>
+            <div class="display">
+                <script>
+                    // screen.availWidth == UI 영역을 제외한 내용 표시 영역의 너비
+                    // screen.availHeight == UI 영역을 제외한 영역의 높이
+                    // screen.width == UI 영역을 포함한 화면의 너비
+                    // scree.height == UI 영역을 포함한 화면의 높이
+                    document.write("<p><b>screen.availWidth : </b>" + screen.availWidth + "</p>");
+                    document.write("<p><b>screen.availHeight : </b>" + screen.availHeight + "</p>");
+                    document.write("<p><b>screen.width : </b>" + screen.width + "</p>");
+                    document.write("<p><b>screen.height : </b>" + screen.height + "</p>");
+                </script>
+            </div>
+        </div>
+    </body>
+</html>
