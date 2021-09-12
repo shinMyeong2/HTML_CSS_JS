@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>event객체</title>
+        <style>
+            #container {
+                width: 300px;
+                margin: 10px auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <img src="images/cup-1.png" id="cup">
+        </div>
+
+        <script>
+            var cup = document.querySelector("#cup");
+
+            cup.onclick = function(event) {
+                // event객체 == 이벤트 정보를 저장
+                //         이벤트가 발생한 요소가 무엇인지, 어떤 이벤트가 발생했는지 등의 정보 저장
+                // event.type == 발생한 이벤트 이름 반환
+                // event.pageX, .pageY == 현재 문서 기준으로 이벤트가 발생한 가로, 세로 위치를 반환
+                alert("이벤트 유형 : " + event.type + ", 이벤트 발생 위치 : " + event.pageX + ", " + event.pageY);
+            }
+        </script>
+    </body>
+</html>

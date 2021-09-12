@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>노드 삭제</title>
+        <link rel="stylesheet" href="nodeList.css">
+    </head>
+    <body>
+        <div id="container">
+            <h1>Web Programming</h1>
+            <p>키워드를 입력하세요</p>
+            <p>키워드를 삭제하세요</p>
+            <form action="">
+                <input type="text" id="subject" autofocus>
+                <button onclick="newRegister(); return false;">추가</button>
+            </form>
+            <hr>
+            <ul id="itemList"></ul>
+        </div>
+
+        <script>
+            function newRegister() {
+                // 노드 추가
+                var newItem = document.createElement("li");
+                var subject = document.querySelector("#subject");
+                var newText = document.createTextNode(subject.value);
+                newItem.appendChild(newText);
+
+                var itemList = document.querySelector("#itemList");
+                itemList.appendChild(newItem);
+
+                subject.value="";
+
+                // 노드 삭제
+                var items = document.querySelectorAll("li");
+                for(i = 0; i < items.length; i++) {
+                                    // 클릭하면 실행하는 함수
+                    items[i].addEventListener("click", function() {
+                        // .parentNode == 현재 노드의 부모 노드를 반환
+                        // 부모노드.removeChild(자식노드) == 부모 노드에서 자식 노드 삭제
+                        if(this.parentNode) // 만약 부모 노드가 있다면
+                            this.parentNode.removeChild(this); // 노드 삭제
+                    });
+                }
+
+            }
+        </script>
+    </body>
+</html>

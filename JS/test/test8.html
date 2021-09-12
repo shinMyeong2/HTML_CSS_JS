@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>test8</title>
+        <style>
+            input {
+                width: 17px;
+            }
+            #container {
+                width: 600px;
+                height: 300px;
+                padding: 20px;
+                border: 1px solid black;
+            }
+            table td {
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <input type="text" id="row">행
+            <input type="text" id="col">열
+            <button onclick="drawTable(); return false;">작성</button>
+            <div id="result"></div>
+        </div>
+
+        <script>
+            function drawTable() {
+                var myRow = document.querySelector("#row").value;
+                var myCol = document.querySelector("#col").value;
+
+                var newTable = document.createElement("table");
+                for(var i = 0; i < myRow; i++) {
+                    var newTr = document.createElement("tr");
+                    for(var j = 0; j < myCol; j++) {
+                        var newTd = document.createElement("td");
+                        var txtNode = document.createTextNode(i + ", " + j);
+                        newTd.appendChild(txtNode);
+                        newTr.appendChild(newTd);
+                    }
+                    newTable.appendChild(newTr);
+                }
+                document.getElementById("result").appendChild(newTable);
+            }
+        </script>
+    </body>
+</html>

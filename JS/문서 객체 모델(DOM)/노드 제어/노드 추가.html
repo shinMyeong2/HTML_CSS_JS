@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>노드 추가</title>
+        <style>
+            #container {
+                width: 500px;
+                padding: 20px;
+                margin: 10px auto;
+            }
+            #info {
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <h1>DOM</h1>
+            <!-- this.onclick => addP() 함수가 한 번만 실행되도록 설정 -->
+            <a herf="#" onclick="addP(); this.onclick='';">더 보기</a>
+            <div id="info"></div>
+        </div>
+
+        <script>
+            function addP() {
+                // .createElement() == 요소 노드 생성
+                var newP = document.createElement("p");
+
+                // .createTextNode() == 텍스트 노드 생성
+                var txtNode = document.createTextNode('DOM은 "Document Object Model"의 줄임말입니다.');
+
+                // 부모노드.appendChild(자식노드) == 자식 노드를 부모 노드에 연결
+                newP.appendChild(txtNode);
+                document.getElementById("info").appendChild(newP);
+            }
+        </script>
+    </body>
+</html>

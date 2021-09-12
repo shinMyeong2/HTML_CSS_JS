@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>속성 노드 추가</title>
+        <style>
+            #container {
+                width: 500px;
+                padding: 20px;
+                margin: 10px auto;
+            }
+            #info {
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <h1>DOM</h1>
+            <a href="#" onclick="addContents(); this.onclick='';">더 보기</a>
+            <div id="info"></div>
+        </div>
+
+        <script>
+            function addContents() {
+                var newP = document.createElement("p");
+                var txtNode = document.createTextNode('DOM은 "Document Object Model"의 줄임말입니다.');
+                newP.appendChild(txtNode);
+
+                var newImg = document.createElement("img");
+                // .createAttribute() == 속성 노드 생성
+                var srcNode = document.createAttribute("src");
+                var altNode = document.createAttribute("alt");
+
+                // .value == 속성값 지정
+                srcNode.value = "dom.jpg";
+                altNode.value = "돔 트리 예제 이미지";
+
+                // .setAttributeNode() == 속성 노드를 부모 노드에 연결
+                newImg.setAttributeNode(srcNode);
+                newImg.setAttributeNode(altNode);
+
+                document.getElementById("info").appendChild(newP);
+                document.getElementById("info").appendChild(newImg);
+            }
+        </script>
+    </body>
+</html>
